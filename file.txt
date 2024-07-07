@@ -1,0 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {
+    let calculatorBtn = document.querySelector('.calculator-btn');
+    calculatorBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      const amount = parseFloat(document.getElementById('amount').value);
+      const term = parseInt(document.getElementById('term').value) * 12; // Convert years to months
+      const annualRate = parseFloat(document.getElementById('rate').value) / 100;
+      const monthlyRate = annualRate / 12; // Convert annual rate to monthly rate
+    
+      const repayment = document.getElementById('repayment').checked;
+      const interestOnly = document.getElementById('interestOnly').checked;
+    
+      let monthlyPayment;
+    
+      if (repayment) {
+        // Repayment mortgage calculation
+        monthlyPayment = amount * (monthlyRate * Math.pow(1 + monthlyRate, term)) / (Math.pow(1 + monthlyRate, term) - 1);
+      } else if (interestOnly) {
+        // Interest only mortgage calculation
+        monthlyPayment = amount * monthlyRate;
+      }
+    
+      document.getElementById('results').textContent = `£${monthlyPayment.toFixed(2)}`;
+      console.log(monthlyPayment);
+    });
+  });
