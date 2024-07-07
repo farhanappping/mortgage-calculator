@@ -296,3 +296,11 @@ font-weight: 600;
     width: 90%;
   }
 }
+
+@media  (max-width: 413px) {
+  .mortgage-form{
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+}
