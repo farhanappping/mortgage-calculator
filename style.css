@@ -76,7 +76,7 @@ cursor: pointer;
     align-items: center;
     border: 1px solid #133040;
     border-radius: 5px;
-    /* overflow: hidden; */
+    overflow: hidden;
     font-family: "Plus Jakarta Sans", sans-serif;
 
   }
