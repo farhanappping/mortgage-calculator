@@ -271,9 +271,43 @@ margin-top: 10px;
 font-weight: 600;
 }
 
+@media (max-width: 1200px) {
+.mortgage-form{
+  width: 70%;
+}
+}
 /* media queries  */
+@media (max-width: 991px) and (orientation: portrait){
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  .right-box{
+    border-radius: 0;
+  }
+  .mortgage-form{
+    width: 90%;
+   
+  }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 991px) and (orientation: landscape){
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  .right-box{
+    border-radius: 0;
+  }
+  .mortgage-form{
+    width: 90%;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+}
+
+@media (max-width: 767px) {
   body{
     height: auto;
    
@@ -292,12 +326,18 @@ font-weight: 600;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1150px) {
+/* @media only screen and (min-width: 769px) and (max-width: 1150px) and (orientation: landscape) {
   .mortgage-form{
-    transform: translate(-50%, -50%);
-    width: 90%;
+    transform: none;
+    width: 100%;
+    top: auto;
+    left: auto;
   }
-}
+} */
+
+
+
+
 
 @media  (max-width: 413px) {
   .mortgage-form{
