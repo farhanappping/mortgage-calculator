@@ -47,7 +47,20 @@ document.addEventListener('DOMContentLoaded', function(){
   })
 
   clearBtn.addEventListener('click', function() {
-    location.reload();
+   let amount = document.querySelector('#amount')
+   let rate = document.querySelector('#rate')
+   let term = document.querySelector('#term')
+   const repayment = document.getElementById('repayment')
+   const interest = document.getElementById('interestOnly')
+
+   amount.value = ''
+   rate.value = ''
+   term.value = ''
+   repayment.checked = false;
+   interest.checked = false;
+   document.querySelectorAll('.type-checkbox').forEach(checkbox=>{
+    checkbox.classList.remove('type-active')
+})
 });
 })
   
